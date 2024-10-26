@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Data files
+*.csv
+*.pkl
+*.h5
+
+# Model files
+*.pt
+*.pth
+*.model
+*.joblib
+
+# Logs and outputs
+logs/
+outputs/
+*.log
+
+# Temporary files
+temp/
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Dependency management
+pip-lock.txt
+poetry.lock
+
+# Streamlit
+.streamlit/
+
+# Wandb
+wandb/
+
+# Checkpoints
+checkpoints/
+
+# Large files (adjust as needed)
+*.zip
+*.tar.gz
+
+# Custom project files (add any specific to your project)
+config.ini
+secrets.yaml
