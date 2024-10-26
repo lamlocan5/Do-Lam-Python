@@ -61,3 +61,5 @@ checkpoints/
 # Custom project files (add any specific to your project)
 config.ini
 secrets.yaml
+
+Adware/
