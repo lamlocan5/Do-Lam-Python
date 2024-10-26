@@ -1,37 +1,42 @@
 # APK Malware Detection Project
 
-This project aims to detect malware in Android APK files using machine learning techniques, including Graph Convolutional Networks (GCN) and Random Forest classifiers.
+Dựa trên thông tin từ các file trong folder, có thể thấy một số điểm chính về dự án này:
 
-## Project Structure
+1. Đây là một dự án phát hiện malware trong các file APK Android sử dụng học máy.
 
-The project consists of several key components:
+2. Dự án sử dụng mô hình BERT để phân loại dựa trên quyền hạn của APK.
 
-1. **Data Extraction** (`Extract.py`): Extracts permissions from APK files and processes them into a standardized format.
-2. **Model Training** (`Train.py`): Trains a deep learning model using the CodeT5 architecture for permission-based classification.
-3. **Inference** (`Inference.py`): Provides a Streamlit-based web interface for uploading and analyzing APK files.
-4. **Graph-based Analysis** (`Inference.py`): Implements a GCN model for feature extraction from APK graphs.
+3. Có 2 file Python chính:
+   - `Train.py`: Dùng để huấn luyện mô hình
+   - `Inference.py`: Cung cấp giao diện web Streamlit để phân tích APK
 
-## Setup and Installation
+4. Dự án sử dụng PyTorch và Transformers để xây dựng và huấn luyện mô hình.
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd <repository-name>
-   ```
+5. Dữ liệu huấn luyện được lưu trong file `APKPermissions.json`.
 
-2. Create and activate a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
+6. Mô hình được lưu trong thư mục `Checkpoints`.
 
-3. Install the required dependencies:
+7. Có sử dụng mixed precision training và gradient accumulation để tối ưu hóa quá trình huấn luyện.
+
+8. Giao diện web cho phép người dùng nhập văn bản quyền hạn để phân loại.
+
+9. Dự án có file requirements.txt để quản lý các thư viện phụ thuộc.
+
+10. Có file .gitignore để loại trừ các file và thư mục không cần thiết khỏi version control.
+
+## Cài đặt và Sử dụng
+
+1. Cài đặt các thư viện cần thiết:
    ```
    pip install -r requirements.txt
    ```
 
-## Usage
+2. Huấn luyện mô hình:
+   ```
+   python Train.py
+   ```
 
-### Data Extraction
-
-Run the extraction script to process APK files:
+3. Chạy giao diện web:
+   ```
+   streamlit run Inference.py
+   ```
